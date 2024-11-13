@@ -55,7 +55,6 @@ export default class NewBill {
   }
   handleSubmit = e => {
     e.preventDefault()
-    console.log('e.target.querySelector(`input[data-testid="datepicker"]`).value', e.target.querySelector(`input[data-testid="datepicker"]`).value)
     const email = JSON.parse(localStorage.getItem("user")).email
     const bill = {
       email,
@@ -70,9 +69,6 @@ export default class NewBill {
       fileName: this.fileName,
       status: 'pending'
     }
-    console.log(this);
-    console.log(e.target);
-    console.log(bill);
     this.updateBill(bill)
     this.onNavigate(ROUTES_PATH['Bills'])
   }

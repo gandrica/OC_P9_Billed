@@ -52,9 +52,6 @@ export default class{
               }
             }
           })
-          // .sort((a, b) => ((new Date(a.date) < new Date(b.date)) ? 1 : -1))
-          console.log('length', bills.length)
-          // console.log(bills);
         return bills
       })
     }
